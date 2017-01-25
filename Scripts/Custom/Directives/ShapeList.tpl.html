@@ -1,0 +1,16 @@
+﻿<div ng-repeat="shape in shapeList">
+    <div ng-if="shape.type=='square'" ng-class="getShapeClass(shape)" style="width:{{shape.size}}px; height:{{shape.size}}px; float:left">
+   
+    </div>
+
+    <div ng-if="shape.type=='circle'" ng-class="getShapeClass(shape)" style="width:{{shape.radius * 2}}px; height:{{shape.radius * 2}}px; border-radius:{{shape.radius}}px; -webkit-border-radius: {{shape.radius}}px;  -moz-border-radius: {{shape.radius}}px; float:left">
+
+    </div>
+
+
+
+    <div style="float:left; font-size:{{square.size}}px ">
+       <br /> {{shape.toString()}}
+    </div>
+    <div style="clear:both"/>
+</div>

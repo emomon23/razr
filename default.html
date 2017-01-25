@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="RazrTestApp">
+<head>
+    <title>Angular Demo</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+
+    <script src="scripts/angular/angular.js"></script>
+    <script src="Scripts/Angular/angular-route.js"></script>
+
+    <script>
+       angular.module("RazrTestApp", ['ngRoute']);
+    </script>
+
+    <script src="Scripts/Custom/POJOs/ShapeModels.js"></script>
+    <script src="Scripts/Custom/POJOs/MockHttp.js"></script>
+    <script src="Scripts/Custom/POJOs/ShapesFacade.js"></script>
+    <script src="Scripts/Custom/Services/LocalServer.js"></script>
+    <script src="scripts/Custom/Controllers/ShapesController.js"></script>
+    <script src="Scripts/Custom/Directives/ShapeList.js"></script>
+    <script src="Scripts/Custom/Configuration/RazrTestAssignmentAppModuleConfig.js"></script>
+</head>
+<body ng-controller="ShapesCTRL">
+    <div class='navbar navbar-inverse'>
+        <a class='nav-brand' href='#'>RazrTestAssignment</a>
+    </div>
+    <div class="panel panel-default row">
+        <div class="col-xs-3">
+            <a href="#/{{category}}" ng-repeat="category in data.shapeCategories" ng-class="getCategoryClass(category)" ng-click="selectCategory(category)" class="btn btn-block btn-default btn-lg">
+                {{ category }}
+            </a>
+               
+        </div>
+        <div class="col-xs-8">
+            <ng-view></ng-view>
+        </div>
+     </div>
+</body>
+</html>
