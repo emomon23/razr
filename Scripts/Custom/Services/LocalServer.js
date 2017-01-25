@@ -14,7 +14,7 @@ angular.module('RazrTestApp')
       
       var shapesFacadeInst = new ShapesFacadeFnc($http, $location, getCirclesURL, getSquaresURL, getAllShapesURL);
 
-      return {
-         shapesFacade: shapesFacadeInst
-      }
+        return {
+            shapesFacade: shapesFacadeInst
+        }
   });

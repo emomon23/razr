@@ -4,6 +4,7 @@
         var _shapesFacade = localServer.shapesFacade;
         var _currentlySelectedCategory = 'All';
 
+        $scope.data = {};
         initializeController();
 
         $scope.getCategoryClass = function (selectedCategory) {
@@ -14,14 +15,12 @@
             _currentlySelectedCategory = selectedCategory;
         }
 
+      
         function initializeController() {
-            $scope.data = {};
-
             _shapesFacade.getAllShapeTypes(function (shapeCategories) {
                 $scope.data.shapeCategories = shapeCategories;
             });
-
-
+            
             _shapesFacade.getSquaresList(function (squareList) {
                 $scope.data.squareList = squareList;
             });
@@ -33,5 +32,7 @@
             _shapesFacade.getAllShapes(function (allShapes) {
                 $scope.data.allShapes = allShapes;
             });
+
+           
         }
     });

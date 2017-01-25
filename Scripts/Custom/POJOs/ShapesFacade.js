@@ -1,58 +1,59 @@
 ﻿function ShapesFacadeFnc(httpService, locationService, getCirclesURL, getSquaresURL, getBothURL) {
     var self = this;
-    var sqaures = null;
-    var circles = null;
-    var allShapes = null;
+    var _sqaures = null;
+    var _circles = null;
+    var _allShapes = null;
 
     self.getSquaresList = function (callBack) {
-        if (sqaures == null) {
+        if (_sqaures == null) {
             httpService.get(getSquaresURL)
                  .success(function (arrayOfSquares) {
-                     sqaures = arrayOfSquares;
-                     callBack(sqaures)
+                     _sqaures = arrayOfSquares;
+                     callBack(_sqaures)
                  })
                  .error(function (error) {
                      //Dosomething = error.status;
                  });
         }
         else {
-            callBack(sqaures);
+            callBack(_sqaures);
         }
     }
 
     self.getCirclesList = function (callBack) {
-        if (circles == null) {
+        if (_circles == null) {
             httpService.get(getCirclesURL)
                  .success(function (arrayOfCircles) {
-                     circles = arrayOfCircles;
-                     callBack(circles)
+                     _circles = arrayOfCircles;
+                     callBack(_circles)
                  })
                  .error(function (error) {
                      //Dosomething = error.status;
                  });
         }
         else {
-            callBack(circles);
+            callBack(_circles);
         }
     }
 
     self.getAllShapes = function (callBack) {
-        if (allShapes == null) {
+        if (_allShapes == null) {
             httpService.get(getBothURL)
                  .success(function (arrayOfShapes) {
-                     allShapes = arrayOfShapes;
-                     callBack(allShapes)
+                     _allShapes = arrayOfShapes;
+                     callBack(_allShapes)
                  })
                  .error(function (error) {
                      //Dosomething = error.status;
                  });
         }
         else {
-            callBack(allShapes);
+            callBack(_allShapes);
         }
     }
 
     self.getAllShapeTypes = function (callback) {
         callback(new Array("All", "Circles", "Squares"));
     }
+    
 }

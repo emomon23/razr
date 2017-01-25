@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -89,7 +90,7 @@
     <Content Include="Scripts\Custom\Directives\ShapeList.js" />
     <Content Include="Scripts\Custom\Directives\ShapeList.tpl.html" />
     <Content Include="Scripts\Custom\POJOs\MockHttp.js" />
-    <Content Include="Scripts\Custom\POJOs\OrderFacade.js" />
+    <Content Include="Scripts\Custom\POJOs\MockShapesGenerator.js" />
     <Content Include="Scripts\Custom\POJOs\ShapeModels.js" />
     <Content Include="Scripts\Custom\POJOs\ShapesFacade.js" />
     <Content Include="Scripts\Custom\Services\LocalServer.js" />
