@@ -82,9 +82,6 @@
     <Content Include="HTML\Circles.html" />
     <Content Include="HTML\CirclesAndSquares.html" />
     <Content Include="HTML\Squares.Html" />
-    <Content Include="Scripts\Angular\angular-resource.js" />
-    <Content Include="Scripts\Angular\angular-route.js" />
-    <Content Include="Scripts\Angular\angular.js" />
     <Content Include="Scripts\Custom\Configuration\RazrTestAssignmentAppModuleConfig.js" />
     <Content Include="Scripts\Custom\Controllers\ShapesController.js" />
     <Content Include="Scripts\Custom\Directives\ShapeList.js" />
